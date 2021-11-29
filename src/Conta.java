@@ -1,7 +1,7 @@
 public abstract class Conta {
 
     //atributos da classe Conta
-    private Cliente dono;
+    protected Cliente dono;
     private String numero;//transformei em string para usar o equals
 
     private double saldo;

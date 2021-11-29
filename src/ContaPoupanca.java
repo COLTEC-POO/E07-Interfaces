@@ -1,4 +1,4 @@
-public class ContaPoupanca extends Conta{
+public class ContaPoupanca extends Conta implements ITaxas {
 
     private double limite;
 
@@ -15,4 +15,9 @@ public class ContaPoupanca extends Conta{
             System.out.println("Limite alterado!");
         }
     }
+
+    public double calculaTaxas() {
+        return 0;
+    }
+
 }

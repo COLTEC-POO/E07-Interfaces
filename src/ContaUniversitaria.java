@@ -1,4 +1,4 @@
-public class ContaUniversitaria extends Conta {
+public class ContaUniversitaria extends Conta implements ITaxas {
     private double limite;
 
     public ContaUniversitaria(Cliente dono, int numConta) {
@@ -13,5 +13,8 @@ public class ContaUniversitaria extends Conta {
             this.limite=limite;
             System.out.println("Limite alterado!");
         }
+    }
+    public double calculaTaxas() {
+        return 0;
     }
 }

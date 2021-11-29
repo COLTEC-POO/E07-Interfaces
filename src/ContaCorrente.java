@@ -1,4 +1,4 @@
-public class ContaCorrente extends Conta {
+public class ContaCorrente extends Conta implements ITaxas {
 
     private double limite;
 
@@ -16,4 +16,16 @@ public class ContaCorrente extends Conta {
             System.out.println("Limite alterado!");
         }
     }
+    //implementacao do mecanismo de tributacao - não está funcionando
+    public double calculaTaxas() {
+        double taxas = 0;
+        if (dono instanceof PessoaFisica) {
+            taxas= 10;
+        }
+        if (dono instanceof PessoaJuridica) {
+            taxas=20;
+        }
+        return taxas;
+    }
+
 }
