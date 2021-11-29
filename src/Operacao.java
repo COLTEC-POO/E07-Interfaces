@@ -14,7 +14,7 @@ public abstract class Operacao {
 
     private char tipo;
 
-    public Operacao() {
+   public Operacao() {
         this.valor = valor;
         this.tipo= 'n';
         data = new Date();

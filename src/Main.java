@@ -71,7 +71,7 @@ public class Main {
         jonas.sacar(500);
         samuel.sacar(100);
         camila.sacar(150);
-        sorvebao.sacar(1230);
+        //sorvebao.sacar(1230);
 
 
         //imprimindo os saldos atualizados das contas com os novos valores de saque
@@ -156,6 +156,16 @@ public class Main {
 
         camila.setLimite(500);
         camila.setLimite(-10);
+
+        //testando imprimirExtratoTaxas:
+
+        sorvebao.sacar(250);
+        sorvebao.sacar(250);
+        sorvebao.sacar(500);
+
+        sorvebao.imprimirExtratoTaxas();
     }
+
+
 
 }

@@ -15,6 +15,7 @@ public class ContaUniversitaria extends Conta implements ITaxas {
         }
     }
     public double calculaTaxas() {
-        return 0;
+        taxas=0;
+        return taxas;
     }
 }

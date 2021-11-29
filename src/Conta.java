@@ -7,11 +7,15 @@ public abstract class Conta {
     private double saldo;
     public Operacao[ ]operacoes;
 
+    public double taxas;
+
     //variavel para controlar o indice do vetor de operações
     public int numeroOp;
 
     //numero de contas criadas durante a execução do sistema
     public static int totalContas=0;
+
+    public int numSaques;//armazena o número de saques feito por essa conta
 
     //metodos da classe conta:
     //construtor:
@@ -24,6 +28,8 @@ public abstract class Conta {
         this.operacoes=new Operacao[1000];
         numeroOp=0;
         Conta.totalContas++;
+        this.numSaques=0;
+        this.taxas=0;
     }
 
     //metodos getters e setters:
@@ -60,6 +66,7 @@ public abstract class Conta {
             operacoes[numeroOp]=new OperacaoSaque(valor);
             this.saldo-=valor;
             numeroOp++;
+            numSaques++;
             return true;
         } else{
             return false;
@@ -94,6 +101,17 @@ public abstract class Conta {
             return false;
         }
 
+    }
+
+    public void imprimirExtratoTaxas(){
+        System.out.println("===Extrato de Taxas===");
+        System.out.println("Manutenção de Conta:"+taxas);
+        //System.out.println("Operações"+operacoes.gett);
+        for(int i=0;i<numSaques;i++){
+            System.out.println("Saque:0.05");
+        }
+        double tot= (taxas+(numSaques*0.05));
+        System.out.println("Total:"+tot);
     }
 
 }
