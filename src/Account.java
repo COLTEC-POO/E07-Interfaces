@@ -108,4 +108,26 @@ public abstract class Account implements ITaxas {
 
     public abstract double calculaTaxas();
 
+    public void imprimirExtratoTaxas() {
+        double total = 0;
+
+        System.out.println("\n=== Extrato de Taxas ===\n");
+
+        double manutencao = this.calculaTaxas();
+        total += manutencao;
+        System.out.println("Manutenção da conta: " + manutencao);
+
+        for (Operacao operacao : this.operations) {
+            if (operacao == null) {
+                break;
+            }
+
+            double taxaDeOperacao = operacao.calculaTaxas();
+            System.out.println(operacao.getNomeTipo() + "\t" + taxaDeOperacao);
+            total += taxaDeOperacao;
+        }
+
+        System.out.println("\nTotal: " + total);
+    }
+
 }

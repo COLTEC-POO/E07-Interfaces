@@ -35,6 +35,16 @@ public abstract class Operacao implements ITaxas {
         return tipo;
     }
 
+    public String getNomeTipo() {
+        if (tipo == 'd') {
+            return "Deposito";
+        } else if (tipo == 's') {
+            return "Saque";
+        }
+
+        throw new IllegalStateException("Unknown operation type");
+    }
+
     public void setTipo(char tipo) {
         this.tipo = tipo;
     }

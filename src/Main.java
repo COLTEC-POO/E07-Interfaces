@@ -31,6 +31,8 @@ public class Main {
         }
 
         account1.printOperations();
+
+        account1.imprimirExtratoTaxas();
     }
 
 }
