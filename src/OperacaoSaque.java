@@ -4,4 +4,7 @@ public class OperacaoSaque extends Operacao {
         super('s', valor);
     }
 
+    public double calculaTaxas() {
+        return 0.05;
+    }
 }

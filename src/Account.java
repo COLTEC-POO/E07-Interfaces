@@ -1,10 +1,10 @@
 import java.text.NumberFormat;
 
-public abstract class Account {
+public abstract class Account implements ITaxas {
     private int id;
     private double total;
     protected double limit;
-    private Client owner;
+    protected Client owner;
     private Operacao[] operations = new Operacao[10000];
     private int currentOperation = 0;
     private static int count = 0;
@@ -105,5 +105,7 @@ public abstract class Account {
     public int getTotalAccounts() {
         return Account.count;
     }
+
+    public abstract double calculaTaxas();
 
 }

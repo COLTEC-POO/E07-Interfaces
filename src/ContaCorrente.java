@@ -13,4 +13,13 @@ public class ContaCorrente extends Account {
         this.limit = limit;
     }
 
+    public double calculaTaxas() {
+        if (this.owner instanceof PessoaFisica) {
+            return 10;
+        } else if (this.owner instanceof PessoaJuridica) {
+            return 20;
+        }
+
+        throw new IllegalStateException("Owner is not a PessoaFisica or PessoaJuridica");
+    }
 }

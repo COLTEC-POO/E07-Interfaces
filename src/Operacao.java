@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public abstract class Operacao {
+public abstract class Operacao implements ITaxas {
 
     public Date data;
     public char tipo;
@@ -51,4 +51,5 @@ public abstract class Operacao {
         return Operacao.count;
     }
 
+    public abstract double calculaTaxas();
 }

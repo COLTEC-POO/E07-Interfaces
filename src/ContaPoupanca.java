@@ -15,4 +15,8 @@ public class ContaPoupanca extends Account {
 
         this.limit = limit;
     }
+
+    public double calculaTaxas() {
+        return 0;
+    }
 }

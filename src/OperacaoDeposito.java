@@ -4,4 +4,8 @@ public class OperacaoDeposito extends Operacao {
         super('d', valor);
     }
 
+    public double calculaTaxas() {
+        return 0;
+    }
+
 }
