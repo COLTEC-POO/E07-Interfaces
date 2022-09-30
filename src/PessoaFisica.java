@@ -35,7 +35,7 @@ public class PessoaFisica extends Cliente{
     }
 
     public String toString() {
-        String pessoaFStr = "==== Dados da conta ====\nNome...........: " + this.getNome() +
+        String pessoaFStr = "Nome...........: " + this.getNome() +
                 "\nCPF............: " + this.cpf + "\nIdade..........: " + this.idade + "\nSexo...........: " + this.sexo +
                 "\nEndereco.......: " + this.getEndereco()+"\n";
         return pessoaFStr;

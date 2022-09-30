@@ -5,7 +5,7 @@ public class OperacaoSaque extends Operacao{
     }
 
     public String toString(){
-        String operacaoSStr = "Tipo.: " + this.getTipo() + "\nValor: " + this.getValor() + "\nData.: " + this.getData();
+        String operacaoSStr = "Tipo.: " + this.getTipo() + "\tValor: " + this.getValor() + "\tData.: " + this.getData() + "\n";
 
         return operacaoSStr;
     }

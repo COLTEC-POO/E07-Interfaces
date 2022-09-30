@@ -105,9 +105,15 @@ public abstract class Conta implements ITaxas {
     }
 
     public String toString() {
-        String contaStr = "Titular......: " + this.titular + "Num conta....: " + this.numConta +
+        String contaStr = "Titular......: " + this.titular.getNome() + "\nNum conta....: " + this.numConta +
                 "\nSaldo........: " + this.saldo + "\nLimite.......: " + this.limiteMax + "\nQtd Operações: " + this.qtdOperacoes +
-                "\nExtrato......: " + this.operacoes;
+                "\nExtrato......:\n";
+        for(Operacao operacao : this.operacoes){
+            if (operacao == null) {
+                break;
+            }
+            contaStr += operacao.toString();
+        }
 
         return contaStr;
     }

@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -12,7 +14,6 @@ public class Main {
         contaTeste2.sacar(100);
         contaTeste2.sacar(87);
         contaTeste2.sacar(213);
-        contaTeste2.imprimirSaldo();
 
         contaTeste2.imprimirExtratoTaxas();
     }

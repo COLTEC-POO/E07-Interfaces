@@ -5,7 +5,7 @@ public class OperacaoDeposito extends Operacao{
     }
 
     public String toString(){
-        String operacaoDStr = "Tipo.: " + this.getTipo() + "\nValor: " + this.getValor() + "\nData.: " + this.getData();
+        String operacaoDStr = "Tipo.: " + this.getTipo() + "\tValor: " + this.getValor() + "\tData.: " + this.getData() + "\n";
 
         return operacaoDStr;
     }

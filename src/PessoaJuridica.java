@@ -36,7 +36,7 @@ public class PessoaJuridica extends Cliente {
     }
 
     public String toString() {
-        String pessoaJStr = "==== Dados da conta ====\nNome............: " + this.getNome() +
+        String pessoaJStr = "Nome............: " + this.getNome() +
                 "\nCNPJ............: " + this.cnpj + "\nSetor...........: " + this.setor +
                 "\nEndereco........: " + this.getEndereco() + "\nNum Funcionarios: " + this.numFuncionarios + "\n";
         return pessoaJStr;
