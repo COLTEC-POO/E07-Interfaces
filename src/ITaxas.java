@@ -1,3 +1,3 @@
 public interface ITaxas {
-    public abstract double calculaTaxa(char tipo);
+    public abstract double calculaTaxa();
 }
